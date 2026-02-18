@@ -3,10 +3,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg)](https://www.typescriptlang.org/)
 [![AgentSkills.io](https://img.shields.io/badge/AgentSkills.io-Compatible-green.svg)](https://agentskills.io/)
-[![Skills](https://img.shields.io/badge/Skills-9-orange.svg)](#available-skills)
-[![APIs](https://img.shields.io/badge/Total%20APIs-1%2C999-blue.svg)](#available-skills)
+[![Skills](https://img.shields.io/badge/Skills-10-orange.svg)](#available-skills)
+[![APIs](https://img.shields.io/badge/Total%20APIs-2%2C065-blue.svg)](#available-skills)
 
-A collection of [Agent Skills](https://agentskills.io/) for managing Alibaba Cloud infrastructure through TypeScript SDKs. These skills provide AI agents with structured knowledge to programmatically interact with **1,999 APIs** across **9 cloud services**.
+A collection of [Agent Skills](https://agentskills.io/) for managing Alibaba Cloud infrastructure through TypeScript SDKs. These skills provide AI agents with structured knowledge to programmatically interact with **2,065 APIs** across **10 cloud services**.
 
 Skills follow the [Agent Skills](https://agentskills.io/) format and are compatible with Claude Code, Cursor, Codex, OpenCode, and [35+ more agents](https://github.com/vercel-labs/skills#supported-agents).
 
@@ -27,7 +27,7 @@ npx skills add dafang/alicloud-agent-skills --skill alicloud-ecs
 Install multiple skills:
 
 ```bash
-npx skills add dafang/alicloud-agent-skills --skill alicloud-ecs --skill alicloud-vpc --skill alicloud-rds
+npx skills add dafang/alicloud-agent-skills --skill alicloud-ecs --skill alicloud-vpc --skill alicloud-ram
 ```
 
 List available skills:
@@ -61,7 +61,8 @@ npx skills add dafang/alicloud-agent-skills --all
 | [alicloud-cr](skills/alicloud-cr) | Container Registry | 115 | 12 | `@alicloud/cr20181201` |
 | [alicloud-oss](skills/alicloud-oss) | Object Storage Service | 90 | 6 | `@alicloud/oss20190517` |
 | [alicloud-fc](skills/alicloud-fc) | Function Compute 3.0 | 67 | 10 | `@alicloud/fc20230330` |
-| **Total** | **9 Services** | **1,999** | **99** | |
+| [alicloud-ram](skills/alicloud-ram) | Resource Access Management | 66 | 7 | `@alicloud/ram20150501` |
+| **Total** | **10 Services** | **2,065** | **106** | |
 
 ## Skill Details
 
@@ -119,6 +120,12 @@ Manage Alibaba Cloud Function Compute (FC) 3.0 — serverless functions, invocat
 
 **Use when:** Building, deploying, or managing serverless functions and event-driven architectures.
 
+### alicloud-ram
+
+Manage Alibaba Cloud Resource Access Management (RAM) — RAM users, user groups, roles, policies, AccessKeys, MFA devices, login profiles, password policies, security preferences, account aliases, and resource tagging.
+
+**Use when:** Managing identity and access control, creating users/roles, or configuring security policies on Alibaba Cloud.
+
 ## Skill Structure
 
 Each skill follows the same consistent structure:
@@ -126,6 +133,7 @@ Each skill follows the same consistent structure:
 ```
 skills/<skill-name>/
 ├── SKILL.md                    # Core instructions for the agent
+├── README.md                   # Human-readable documentation
 ├── scripts/
 │   ├── setup_client.ts         # Reusable client factory
 │   └── examples.ts             # Ready-to-use code examples
@@ -169,6 +177,7 @@ Skills are automatically available once installed. The agent will use them when 
 - "Set up a Redis cluster with 4 shards"
 - "Build a container image from my GitHub repo and push to ACR"
 - "Configure CDN cache refresh for my website"
+- "Create a RAM user with read-only access to ECS and attach MFA"
 
 ## Related Links
 

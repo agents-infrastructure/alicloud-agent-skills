@@ -1,6 +1,6 @@
 # Alibaba Cloud Agent Skills
 
-This repository contains 9 agent skills for managing Alibaba Cloud infrastructure through TypeScript SDKs, covering 1,999 APIs across compute, networking, storage, database, DNS, CDN, container, serverless, and caching services.
+This repository contains 10 agent skills for managing Alibaba Cloud infrastructure through TypeScript SDKs, covering 2,065 APIs across compute, networking, storage, database, DNS, CDN, container, serverless, caching, and identity management services.
 
 ## Skills Overview
 
@@ -15,6 +15,7 @@ This repository contains 9 agent skills for managing Alibaba Cloud infrastructur
 | `alicloud-cr` | Container Registry | Container images, builds, scanning, Helm charts |
 | `alicloud-oss` | Object Storage Service | Buckets, objects, multipart uploads |
 | `alicloud-fc` | Function Compute 3.0 | Serverless functions, triggers, layers |
+| `alicloud-ram` | Resource Access Management | RAM users, groups, roles, policies, AccessKeys, MFA |
 
 ## How to Use
 
